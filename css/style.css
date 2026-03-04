@@ -1,0 +1,297 @@
+/* =====================================================
+   STYLE.CSS — Reset, Base & Utilities
+   MP Doors Warm Craft Design System
+   ===================================================== */
+
+@import 'warm-craft.css';
+
+/* ─── Reset ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
+  color: var(--walnut-mid);
+  background-color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, video, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}
+
+/* ─── Typography Base ─── */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--walnut);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: var(--text-h1);
+  line-height: var(--lh-h1);
+}
+
+h2 {
+  font-size: var(--text-h2);
+  line-height: var(--lh-h2);
+}
+
+h3 {
+  font-size: var(--text-h3);
+  line-height: var(--lh-h3);
+}
+
+p {
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
+  color: var(--walnut-mid);
+}
+
+/* ─── Layout Utilities ─── */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: var(--section-pad-desktop) 0;
+}
+
+.section--cream {
+  background: var(--cream);
+}
+
+.section--white {
+  background: var(--white);
+}
+
+.section--orange-light {
+  background: var(--orange-light);
+}
+
+.section--gradient {
+  background: var(--grad-section);
+}
+
+/* ─── Grid Utilities ─── */
+.grid {
+  display: grid;
+  gap: var(--col-gap);
+}
+
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+
+.flex {
+  display: flex;
+}
+
+.flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex--between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex--gap {
+  gap: var(--col-gap);
+}
+
+/* ─── Text Utilities ─── */
+.text-center { text-align: center; }
+.text-walnut { color: var(--walnut); }
+.text-walnut-mid { color: var(--walnut-mid); }
+.text-walnut-light { color: var(--walnut-light); }
+.text-orange { color: var(--orange); }
+.text-white { color: var(--white); }
+
+.font-display { font-family: var(--font-display); }
+.font-body { font-family: var(--font-body); }
+
+.caption {
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  color: var(--walnut-light);
+  line-height: 1.5;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+/* ─── Spacing Utilities ─── */
+.mt-8  { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+.mt-32 { margin-top: 32px; }
+.mt-48 { margin-top: 48px; }
+.mt-64 { margin-top: 64px; }
+
+.mb-8  { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; }
+.mb-32 { margin-bottom: 32px; }
+.mb-48 { margin-bottom: 48px; }
+
+/* ─── Divider ─── */
+.divider {
+  height: 1px;
+  background: var(--border);
+  border: none;
+  margin: 0;
+}
+
+/* ─── Section Headers ─── */
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 64px;
+}
+
+.section-header h2 {
+  margin-bottom: 16px;
+}
+
+.section-header p {
+  font-size: 18px;
+  color: var(--walnut-mid);
+}
+
+/* ─── Breadcrumb ─── */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  color: var(--walnut-light);
+  padding: 16px 0;
+}
+
+.breadcrumb a {
+  color: var(--walnut-light);
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: var(--orange);
+}
+
+.breadcrumb span {
+  color: var(--walnut-light);
+}
+
+.breadcrumb .sep {
+  color: var(--border);
+}
+
+/* ─── Placeholder Images ─── */
+.img-placeholder {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+
+.img-placeholder span {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--walnut-light);
+  line-height: 1.3;
+}
+
+/* ─── Stars ─── */
+.stars {
+  color: var(--orange);
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  :root {
+    --text-h1: 44px;
+    --text-h2: 32px;
+    --col-gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --text-h1: 36px;
+    --text-h2: 28px;
+    --text-h3: 20px;
+    --section-pad-desktop: 56px;
+    --col-gap: 24px;
+  }
+
+  .grid--2,
+  .grid--3,
+  .grid--4 {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --text-h1: 30px;
+    --text-h2: 24px;
+    --section-pad-desktop: 40px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+}
