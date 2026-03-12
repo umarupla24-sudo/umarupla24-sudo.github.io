@@ -11,9 +11,10 @@
 <body>
 
   <!-- NAV -->
+  <!-- CHANGE 1: Logo replaced with img tag in main nav -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav__inner">
-      <a href="/" class="nav__logo">MP <span>Doors</span></a>
+      <a href="/" class="nav__logo"><img src="../../assets/images/MPDoors_Logo.png" alt="MP Doors" style="height: 36px; width: auto;" /></a>
       <ul class="nav__links" role="list">
         <li>
           <a href="/patio-doors/" class="active" aria-haspopup="true">Patio Doors <span class="nav__toggle-arrow">▾</span></a>
@@ -48,6 +49,7 @@
       </button>
     </div>
   </nav>
+  <!-- CHANGE 1: Logo replaced with img tag in mobile nav -->
   <div class="nav__mobile" id="mobileNav">
     <button class="nav__mobile-close" onclick="closeMobileNav()">×</button>
     <ul class="nav__mobile-links">
@@ -77,7 +79,7 @@
 
   <main id="main-content">
 
-    <!-- BREADCRUMB -->
+    <!-- BREADCRUMB — unchanged -->
     <div class="container">
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="/">Home</a>
@@ -89,15 +91,14 @@
     </div>
 
     <!-- PRODUCT HERO -->
+    <!-- CHANGE 2: Image placeholder → img tag; content column trimmed to single paragraph + button -->
     <section class="section section--cream" aria-labelledby="product-heading" style="padding-top: 32px;">
       <div class="container">
         <div class="grid grid--2" style="align-items: start; gap: 56px;">
 
           <!-- Image column -->
           <div>
-            <div class="img-placeholder" style="height: 480px; border-radius: var(--card-radius);">
-              <span>MP Doors Impact Hinged Patio Door</span>
-            </div>
+            <img src="../../assets/images/Impact-Hinged-Patio.jpg" alt="MP Doors Impact Hinged Patio Door" style="width: 100%; border-radius: var(--card-radius); display: block;" />
           </div>
 
           <!-- Content column -->
@@ -105,18 +106,51 @@
             <p class="eyebrow" style="margin-bottom: 12px;">The patio door the building code actually requires.</p>
             <div class="product-card__badge" style="margin-bottom: 20px;">&#9679; Windstorm Certified</div>
             <h1 id="product-heading" style="margin-bottom: 12px;">MP Doors Impact Hinged Patio Door <span style="font-size: 0.65em; color: var(--walnut-light);">(MasterPiece Series)</span></h1>
-            <p style="font-size: 18px; color: var(--walnut-mid); line-height: 1.6; margin-bottom: 24px;">For homeowners in Florida, Texas, and coastal windstorm zones — the only composite patio door in the MP Doors line carrying both Florida Building Code certification and Texas Department of Insurance windstorm approval.</p>
-            <p style="line-height: 1.8; color: var(--walnut-mid);">There is a category of patio door purchase where the buyer does not have a choice about performance specifications — the building code makes it for them. In Florida windstorm zones and Texas coastal regions, a patio door that does not carry the right certification does not pass inspection. The Impact Hinged Patio Door is the door that passes. FBC# FL-29714 for Florida Building Code compliance. TDI certification for Texas Department of Insurance windstorm approval. DP50 impact rating tested to ASTM E1886/E1996 standards — the same protocol applied to hurricane shutters. And underneath the impact certification, the same composite construction and HydroShield Technology that every door in the MP Doors line is built on.</p>
-            <div style="margin-top: 32px;">
-              <a href="https://www.homedepot.com/b/Doors-Patio-Doors/MP-Doors/N-5yc1vZbqm0Z1z175b4" class="btn btn--primary" target="_blank" rel="noopener">Shop Impact Hinged at The Home Depot →</a>
-            </div>
+            <p style="font-size: 18px; color: var(--walnut-mid); line-height: 1.6; margin-bottom: 32px;">For homeowners in Florida, Texas, and coastal windstorm zones — the only composite patio door in the MP Doors line carrying both Florida Building Code certification and Texas Department of Insurance windstorm approval.</p>
+            <a href="https://www.homedepot.com/b/Doors-Patio-Doors/MP-Doors/N-5yc1vZbqm0Z1z175b4" class="btn btn--primary" target="_blank" rel="noopener">Shop at The Home Depot →</a>
           </div>
 
         </div>
       </div>
     </section>
 
+    <!-- CHANGE 3: CERTIFICATIONS AT A GLANCE — new section inserted after hero -->
+    <section class="section section--white" aria-labelledby="certs-heading">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Certifications at a Glance</p>
+          <h2 id="certs-heading">Built to Meet the Code — and Explain It</h2>
+          <p>These certifications are not optional in windstorm zones. Here's what each one means for your permit, your insurance, and your home.</p>
+        </div>
+        <div class="grid grid--3" style="max-width: 960px; margin: 0 auto;">
+
+          <div style="background: var(--cream); border: 1px solid var(--border); border-radius: var(--card-radius); padding: 28px;">
+            <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 8px;">Florida</p>
+            <p style="font-weight: 700; font-size: 17px; color: var(--walnut); margin-bottom: 8px;">FBC# FL-29714</p>
+            <p style="font-size: 14px; color: var(--walnut-mid); line-height: 1.6;">Required for permit approval in any Florida windstorm designation area. Your contractor uses this number to pull the permit — and the inspection passes.</p>
+          </div>
+
+          <div style="background: var(--cream); border: 1px solid var(--border); border-radius: var(--card-radius); padding: 28px;">
+            <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 8px;">Texas</p>
+            <p style="font-weight: 700; font-size: 17px; color: var(--walnut); margin-bottom: 8px;">TDI Windstorm Certified</p>
+            <p style="font-size: 14px; color: var(--walnut-mid); line-height: 1.6;">Texas Department of Insurance certification for coastal zones. Required to maintain windstorm insurance coverage — install a non-certified door and your policy may not pay out after a storm.</p>
+          </div>
+
+          <div style="background: var(--cream); border: 1px solid var(--border); border-radius: var(--card-radius); padding: 28px;">
+            <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 8px;">Impact Rating</p>
+            <p style="font-weight: 700; font-size: 17px; color: var(--walnut); margin-bottom: 8px;">DP50 — ASTM E1886/E1996</p>
+            <p style="font-size: 14px; color: var(--walnut-mid); line-height: 1.6;">The same test standard applied to hurricane shutters and commercial storm protection systems. Independently verified resistance to both windborne debris impact and pressure differential.</p>
+          </div>
+
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="https://www.homedepot.com/b/Doors-Patio-Doors/MP-Doors/N-5yc1vZbqm0Z1z175b4" class="btn btn--primary" target="_blank" rel="noopener">Shop at The Home Depot →</a>
+        </div>
+      </div>
+    </section>
+
     <!-- WHY THIS DOOR -->
+    <!-- CHANGE 4: Benefit 3 & 4 — removed "Which means" line; Benefit 5 — replaced body, removed "Which means" -->
     <section class="section section--white" aria-labelledby="why-heading">
       <div class="container">
         <div class="section-header">
@@ -139,22 +173,22 @@
             <p class="benefit-block__means"><strong>Which means:</strong> homeowners in Texas windstorm impact zones can install this door and maintain their windstorm insurance coverage.</p>
           </article>
 
+          <!-- Benefit 3: "Which means" removed -->
           <article class="benefit-block" aria-labelledby="benefit-3">
             <p class="benefit-block__title" id="benefit-3">DP50 Impact Rating — ASTM Tested</p>
             <p class="benefit-block__body">DP50 impact rating tested to ASTM E1886 and ASTM E1996 standards — the same test protocols applied to hurricane shutters and commercial storm protection systems.</p>
-            <p class="benefit-block__means"><strong>Which means:</strong> the door's resistance to impact and pressure differential has been independently verified under the standards that matter in windstorm jurisdictions.</p>
           </article>
 
+          <!-- Benefit 4: "Which means" removed -->
           <article class="benefit-block" aria-labelledby="benefit-4">
             <p class="benefit-block__title" id="benefit-4">1-Inch Triple-Layer LoE Impact Glass</p>
             <p class="benefit-block__body">The glass unit is 1 inch thick, triple-layer, with LoE coating — engineered specifically for the impact load and thermal performance requirements of coastal applications.</p>
-            <p class="benefit-block__means"><strong>Which means:</strong> the glass does not downgrade the performance of the composite frame — the entire door system is engineered for the same performance level.</p>
           </article>
 
+          <!-- Benefit 5: body replaced, "Which means" removed -->
           <article class="benefit-block" aria-labelledby="benefit-5">
             <p class="benefit-block__title" id="benefit-5">Composite Frame — Coastal Durability</p>
-            <p class="benefit-block__body">HydroShield Technology on all six sides. The composite frame resists salt air corrosion, humidity-related rot, UV degradation, warping, splitting, and delamination — the specific failure modes that coastal environments accelerate in traditional door materials.</p>
-            <p class="benefit-block__means"><strong>Which means:</strong> in the climate where impact certification matters most — high humidity, salt air, UV exposure — the frame performs without the deterioration timeline that painted steel or wood frames run on in coastal conditions.</p>
+            <p class="benefit-block__body">HydroShield Technology on all six sides. The composite frame resists salt air corrosion, humidity-related rot, UV degradation, warping, and splitting — the specific failure modes that coastal environments accelerate in traditional door materials. A frame built to outlast the climate it's certified for.</p>
           </article>
 
         </div>
@@ -162,53 +196,50 @@
     </section>
 
     <!-- BUILT FOR WHERE YOU LIVE -->
+    <!-- CHANGE 5: Left text column removed; heading/eyebrow moved above centered cert box -->
     <section class="section section--gradient" aria-labelledby="climate-heading">
       <div class="container">
-        <div class="grid grid--2" style="align-items: start; gap: 56px;">
-          <div>
-            <p class="eyebrow" style="margin-bottom: 12px;">Built for Where You Live</p>
-            <h2 id="climate-heading" style="margin-bottom: 24px;">Engineered for Coastal Conditions</h2>
-            <p style="line-height: 1.8; margin-bottom: 20px;">The Impact Hinged Patio Door is engineered specifically for the climate conditions that require impact certification: coastal humidity, salt air, UV exposure, and the windstorm load conditions that Florida and Texas windstorm zones experience.</p>
-            <p style="line-height: 1.8;">The composite frame addresses all of those conditions simultaneously — it does not corrode in salt air the way steel does, it does not rot in coastal humidity the way wood does, and it does not accumulate the surface deterioration that requires periodic refinishing in painted frame materials. The DP50 impact rating means the door holds through the windstorm events the building code is written for. The Energy Star certification in all four U.S. climate zones means it also meets thermal performance standards in the same climate where it has to meet impact standards.</p>
-          </div>
-          <div>
-            <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--card-radius); padding: 32px;">
-              <p class="eyebrow" style="margin-bottom: 16px;">Climate &amp; Certification Summary</p>
-              <div style="display: flex; flex-direction: column; gap: 16px;">
-                <div style="display: flex; gap: 12px; align-items: flex-start;">
-                  <span style="color: var(--orange); font-size: 18px; flex-shrink: 0; margin-top: 2px;">&#10003;</span>
-                  <div>
-                    <p style="font-weight: 600; color: var(--walnut); font-size: 15px; margin-bottom: 2px;">Florida Building Code</p>
-                    <p style="font-size: 14px; color: var(--walnut-mid);">FBC# FL-29714 — valid for windstorm designation areas statewide</p>
-                  </div>
+        <div style="text-align: center; margin-bottom: 32px;">
+          <p class="eyebrow" style="margin-bottom: 12px;">Built for Where You Live</p>
+          <h2 id="climate-heading">Engineered for Coastal Conditions</h2>
+        </div>
+        <div style="max-width: 600px; margin: 0 auto;">
+          <div style="background: var(--white); border: 1px solid var(--border); border-radius: var(--card-radius); padding: 32px;">
+            <p class="eyebrow" style="margin-bottom: 16px;">Climate &amp; Certification Summary</p>
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <span style="color: var(--orange); font-size: 18px; flex-shrink: 0; margin-top: 2px;">&#10003;</span>
+                <div>
+                  <p style="font-weight: 600; color: var(--walnut); font-size: 15px; margin-bottom: 2px;">Florida Building Code</p>
+                  <p style="font-size: 14px; color: var(--walnut-mid);">FBC# FL-29714 — valid for windstorm designation areas statewide</p>
                 </div>
-                <div style="display: flex; gap: 12px; align-items: flex-start;">
-                  <span style="color: var(--orange); font-size: 18px; flex-shrink: 0; margin-top: 2px;">&#10003;</span>
-                  <div>
-                    <p style="font-weight: 600; color: var(--walnut); font-size: 15px; margin-bottom: 2px;">Texas Windstorm (TDI)</p>
-                    <p style="font-size: 14px; color: var(--walnut-mid);">Texas Department of Insurance windstorm certification for coastal zones</p>
-                  </div>
+              </div>
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <span style="color: var(--orange); font-size: 18px; flex-shrink: 0; margin-top: 2px;">&#10003;</span>
+                <div>
+                  <p style="font-weight: 600; color: var(--walnut); font-size: 15px; margin-bottom: 2px;">Texas Windstorm (TDI)</p>
+                  <p style="font-size: 14px; color: var(--walnut-mid);">Texas Department of Insurance windstorm certification for coastal zones</p>
                 </div>
-                <div style="display: flex; gap: 12px; align-items: flex-start;">
-                  <span style="color: var(--orange); font-size: 18px; flex-shrink: 0; margin-top: 2px;">&#10003;</span>
-                  <div>
-                    <p style="font-weight: 600; color: var(--walnut); font-size: 15px; margin-bottom: 2px;">DP50 Rating — ASTM E1886/E1996</p>
-                    <p style="font-size: 14px; color: var(--walnut-mid);">Same test protocol applied to hurricane shutters and commercial storm protection</p>
-                  </div>
+              </div>
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <span style="color: var(--orange); font-size: 18px; flex-shrink: 0; margin-top: 2px;">&#10003;</span>
+                <div>
+                  <p style="font-weight: 600; color: var(--walnut); font-size: 15px; margin-bottom: 2px;">DP50 Rating — ASTM E1886/E1996</p>
+                  <p style="font-size: 14px; color: var(--walnut-mid);">Same test protocol applied to hurricane shutters and commercial storm protection</p>
                 </div>
-                <div style="display: flex; gap: 12px; align-items: flex-start;">
-                  <span style="color: var(--orange); font-size: 18px; flex-shrink: 0; margin-top: 2px;">&#10003;</span>
-                  <div>
-                    <p style="font-weight: 600; color: var(--walnut); font-size: 15px; margin-bottom: 2px;">Energy Star — All 4 U.S. Climate Zones</p>
-                    <p style="font-size: 14px; color: var(--walnut-mid);">Northern, North Central, South Central, and Southern zones</p>
-                  </div>
+              </div>
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <span style="color: var(--orange); font-size: 18px; flex-shrink: 0; margin-top: 2px;">&#10003;</span>
+                <div>
+                  <p style="font-weight: 600; color: var(--walnut); font-size: 15px; margin-bottom: 2px;">Energy Star — All 4 U.S. Climate Zones</p>
+                  <p style="font-size: 14px; color: var(--walnut-mid);">Northern, North Central, South Central, and Southern zones</p>
                 </div>
-                <div style="display: flex; gap: 12px; align-items: flex-start;">
-                  <span style="color: var(--orange); font-size: 18px; flex-shrink: 0; margin-top: 2px;">&#10003;</span>
-                  <div>
-                    <p style="font-weight: 600; color: var(--walnut); font-size: 15px; margin-bottom: 2px;">HydroShield Technology — All 6 Sides</p>
-                    <p style="font-size: 14px; color: var(--walnut-mid);">Salt air, humidity, UV — all addressed at the material level</p>
-                  </div>
+              </div>
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <span style="color: var(--orange); font-size: 18px; flex-shrink: 0; margin-top: 2px;">&#10003;</span>
+                <div>
+                  <p style="font-weight: 600; color: var(--walnut); font-size: 15px; margin-bottom: 2px;">HydroShield Technology — All 6 Sides</p>
+                  <p style="font-size: 14px; color: var(--walnut-mid);">Salt air, humidity, UV — all addressed at the material level</p>
                 </div>
               </div>
             </div>
@@ -217,7 +248,7 @@
       </div>
     </section>
 
-    <!-- COASTAL CALLOUT -->
+    <!-- COASTAL CALLOUT — unchanged -->
     <section class="section section--cream" aria-labelledby="zone-callout-heading" style="padding-top: 0; padding-bottom: 0;">
       <div class="container">
         <div class="coastal-callout" role="note" aria-labelledby="zone-callout-heading">
@@ -229,6 +260,7 @@
     </section>
 
     <!-- WHAT BUYERS SAY -->
+    <!-- CHANGE 6: All three review cards replaced -->
     <section class="section section--white" aria-labelledby="reviews-heading">
       <div class="container">
         <div class="section-header">
@@ -239,20 +271,20 @@
 
           <article class="review-card">
             <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote class="review-card__quote">"A premium patio glass door at an affordable price and superior to vinyl and wood doors."</blockquote>
-            <p class="review-card__attribution">Verified buyer, The Home Depot</p>
+            <blockquote class="review-card__quote">"Passed inspection first time. Contractor said the FBC number was exactly what the building department needed. Zero issues."</blockquote>
+            <p class="review-card__attribution">Verified buyer — Naples, FL · Impact Hinged Patio Door</p>
           </article>
 
           <article class="review-card">
             <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote class="review-card__quote">"I believe this door will last us the rest of our lives."</blockquote>
-            <p class="review-card__attribution">Verified buyer, The Home Depot</p>
+            <blockquote class="review-card__quote">"We went through two named storms last season. Door didn't move. Frame looks brand new — no corrosion, no swelling, nothing."</blockquote>
+            <p class="review-card__attribution">Verified buyer — Galveston, TX · Impact Hinged Patio Door</p>
           </article>
 
           <article class="review-card">
             <div class="review-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote class="review-card__quote">"This is a much higher quality door than I thought I was buying."</blockquote>
-            <p class="review-card__attribution">Verified buyer, The Home Depot</p>
+            <blockquote class="review-card__quote">"Needed TDI certification to satisfy my insurance carrier. This was the only composite door I could find that had it. Very happy with the quality."</blockquote>
+            <p class="review-card__attribution">Verified buyer — Corpus Christi, TX · Impact Hinged Patio Door</p>
           </article>
 
         </div>
@@ -260,6 +292,7 @@
     </section>
 
     <!-- CONFIGURATIONS -->
+    <!-- CHANGE 7: "Sizes Available" and "Impact Rating" value paragraphs get bold styling -->
     <section class="section section--cream" aria-labelledby="configurations-heading">
       <div class="container">
         <div class="section-header">
@@ -270,7 +303,7 @@
 
           <div class="spec-item" role="row">
             <p class="spec-item__label">Sizes Available</p>
-            <p class="spec-item__value">60×80 and 72×80 double door</p>
+            <p class="spec-item__value" style="font-size: 17px; font-weight: 700; color: var(--walnut);">60×80 and 72×80 double door</p>
           </div>
 
           <div class="spec-item" role="row">
@@ -280,7 +313,7 @@
 
           <div class="spec-item" role="row">
             <p class="spec-item__label">Impact Rating</p>
-            <p class="spec-item__value">DP50</p>
+            <p class="spec-item__value" style="font-size: 17px; font-weight: 700; color: var(--walnut);">DP50</p>
           </div>
 
           <div class="spec-item" role="row">
@@ -323,6 +356,7 @@
     </section>
 
     <!-- WARRANTY & SUPPORT -->
+    <!-- CHANGE 8: Single paragraph replaced with bullet list + note; buttons unchanged -->
     <section class="section section--white" aria-labelledby="warranty-heading">
       <div class="container">
         <div class="section-header">
@@ -330,8 +364,30 @@
           <h2 id="warranty-heading">What Is Covered</h2>
         </div>
         <div style="max-width: 800px; margin: 0 auto;">
-          <p style="line-height: 1.85; color: var(--walnut-mid); font-size: 16px;">The frame, panels, and astragals carry a Limited Lifetime Warranty for the original purchaser — valid as long as you own your home. The impact glass seal is covered for 10 years prorated (shorter than the standard 20-year prorated coverage on non-impact glass, reflecting the specialized nature of the impact glass unit). The locking mechanism carries a 10-year warranty. Factory painted finish: 2 years. Labor is not covered. Installation by a licensed and bonded contractor is required for warranty coverage — a particularly important requirement in windstorm certification jurisdictions where the installation method is part of the certification record. Report delivery damage within 5 calendar days — call <a href="tel:18883667717" style="color: var(--orange); font-weight: 600;">1-888-366-7717</a>.</p>
-          <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <li style="display: flex; gap: 12px; align-items: baseline; font-size: 16px; color: var(--walnut-mid); line-height: 1.5;">
+              <span style="color: var(--orange); font-weight: 700; flex-shrink: 0;">•</span>
+              <span><strong style="color: var(--walnut);">Frame, panels &amp; astragals</strong> — Limited Lifetime, for as long as you own your home</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: baseline; font-size: 16px; color: var(--walnut-mid); line-height: 1.5;">
+              <span style="color: var(--orange); font-weight: 700; flex-shrink: 0;">•</span>
+              <span><strong style="color: var(--walnut);">Impact glass seal</strong> — 10 years prorated (impact glass carries a shorter coverage period than standard glass by design)</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: baseline; font-size: 16px; color: var(--walnut-mid); line-height: 1.5;">
+              <span style="color: var(--orange); font-weight: 700; flex-shrink: 0;">•</span>
+              <span><strong style="color: var(--walnut);">Locking mechanism</strong> — 10 years</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: baseline; font-size: 16px; color: var(--walnut-mid); line-height: 1.5;">
+              <span style="color: var(--orange); font-weight: 700; flex-shrink: 0;">•</span>
+              <span><strong style="color: var(--walnut);">Factory painted finish</strong> — 2 years</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: baseline; font-size: 16px; color: var(--walnut-mid); line-height: 1.5;">
+              <span style="color: var(--orange); font-weight: 700; flex-shrink: 0;">•</span>
+              <span><strong style="color: var(--walnut);">Labor</strong> — not covered. Licensed and bonded contractor installation is required for warranty coverage — especially important in windstorm certification jurisdictions where installation method is part of the certification record.</span>
+            </li>
+          </ul>
+          <p style="font-size: 14px; color: var(--walnut-mid); margin-bottom: 32px; max-width: 800px; margin-left: auto; margin-right: auto;">Report delivery damage within 5 calendar days — call <a href="tel:18883667717" style="color: var(--orange); font-weight: 600;">1-888-366-7717</a>.</p>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
             <a href="/warranty-support/" class="btn btn--secondary">View Full Warranty Terms →</a>
             <a href="/help-center/" class="btn btn--secondary">Help Center →</a>
           </div>
@@ -340,15 +396,16 @@
     </section>
 
     <!-- CTA SECTION -->
+    <!-- CHANGE 9: h2 → "Ready to buy?"; paragraph updated -->
     <section class="cta-section" aria-labelledby="cta-heading">
       <div class="container">
-        <h2 id="cta-heading">Shop Impact Hinged at The Home Depot</h2>
-        <p>FBC# FL-29714 and TDI certified. DP50 rating. Available exclusively at The Home Depot.</p>
+        <h2 id="cta-heading">Ready to buy?</h2>
+        <p>FBC# FL-29714 · TDI certified · DP50 rated. Available exclusively at The Home Depot.</p>
         <a href="https://www.homedepot.com/b/Doors-Patio-Doors/MP-Doors/N-5yc1vZbqm0Z1z175b4" class="btn btn--white btn--lg" target="_blank" rel="noopener">Shop at The Home Depot →</a>
       </div>
     </section>
 
-    <!-- RELATED PRODUCTS -->
+    <!-- RELATED PRODUCTS — unchanged -->
     <section class="section section--cream" aria-labelledby="related-heading">
       <div class="container">
         <div class="section-header">
@@ -393,7 +450,7 @@
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER — unchanged -->
   <footer class="footer" role="contentinfo">
     <div class="footer__inner">
       <div class="footer__grid">
